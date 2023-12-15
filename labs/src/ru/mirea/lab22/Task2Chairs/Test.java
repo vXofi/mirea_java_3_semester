@@ -2,14 +2,12 @@ package ru.mirea.lab22.Task2Chairs;
 
 public class Test {
     public static void main(String[] args) {
-        ChairFactory victorianFactory = new VictorianChairFactory();
-        Chair victorianChair = victorianFactory.createChair();
+        UniversalChairFactory factory = new UniversalChairFactory();
 
-        ChairFactory multifunctionalFactory = new MultifunctionalChairFactory();
-        Chair multifunctionalChair = multifunctionalFactory.createChair();
 
-        ChairFactory magicFactory = new MagicChairFactory();
-        Chair magicChair = magicFactory.createChair();
+        Chair victorianChair = factory.createVictorianChair();
+        Chair multifunctionalChair = factory.createMultifunctionalChair();
+        Chair magicChair = factory.createMagicChair();
 
         Client client = new Client();
         client.sit(victorianChair);
